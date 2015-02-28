@@ -12,11 +12,13 @@ class Metric
     private $name;
     private $value;
     private $type;
+    private $timestamp;
 
-    public function __construct( $name, $value, $type )
+    public function __construct( $name, $value, $type, $timestamp )
     {
         $this->name = $name;
         $this->value = $value;
+        $this->timestamp = $timestamp;
         $this->type = $type;
     }
 
@@ -33,5 +35,11 @@ class Metric
     public function getType()
     {
         return $this->type;
+    }
+
+
+    public function getTimestamp()
+    {
+        return $this->timestamp;
     }
 }
